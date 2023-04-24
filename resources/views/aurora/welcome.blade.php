@@ -7,8 +7,8 @@
     <title>Home</title>
 </head>
 <body>
-    <a href="/aurora.register">Registrar</a>
+    <a href="/register">Registrar</a>
     <br>
-    <a href="/login"></a>
+    <a href="/login">Login</a>''
 </body>
 </html>

@@ -10,9 +10,11 @@
     <form action="">
         <label for="">Email:</label>
         <input type="text" name="email" id="email">
-        <br>
+        <br><br>
         <label for="">Senha:</label>
-        <input type="password" name="senha" id="senha">
+        <input type="text" name="senha" id="senha">
+        <br><br>
+        <input type="submit" name="botao" value="Entrar">
     </form>
 
     <a href="/">Home</a>

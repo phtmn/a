@@ -9,13 +9,15 @@
 <body>
     <form action="">
         <label for="">Nome:</label>
-        <input type="text" name="nome" id="nome">
-        <br>
+        <input type="text" name="name" id="nome">
+        <br><br>
         <label for="">Email:</label>
         <input type="text" name="email" id="email">
-        <br>
+        <br><br>
         <label for="">Senha:</label>
-        <input type="password" name="senha" id="senha">
+        <input type="text" name="senha" id="senha">
+        <br><br>
+        <input type="submit" name="botao" value="Cadastrar">
     </form>
 
     <a href="/">Home</a>
