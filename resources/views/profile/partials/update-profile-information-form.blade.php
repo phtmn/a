@@ -21,6 +21,18 @@
         </div>
 
         <div>
+            <x-input-label for="bio" :value="__('Biografía')" />
+            <x-text-input id="bio" name="bio" type="text" class="mt-1 block w-full" :value="old('bio', $user->bio)" required autofocus autocomplete="bio" />
+            <x-input-error class="mt-2" :messages="$errors->get('bio')" />
+        </div>
+
+        <div>
+            <x-input-label for="imagem" :value="__('Avatar')" />
+            <x-text-input id="imagem" name="imagem" type="file" class="mt-1 block w-full" :value="old('imagem', $user->imagem)" required autofocus />
+            <x-input-error class="mt-2" :messages="$errors->get('imagem')" />
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
