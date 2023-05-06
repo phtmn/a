@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\ListaController;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,18 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ListaController::class,'index']);
-
-Route::get('/lista', [ListaController::class,'show'])->middleware(['auth', 'verified'])->name('lista');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/products/create',[ProductsController::class,'create']);
+Route::post('/products/store',[ProductsController::class,'store']);
+Route::get('/products',[ProductsController::class,'index']);
+Route::get('/product/edit/{id}',[ProductsController::class,'edit']);
