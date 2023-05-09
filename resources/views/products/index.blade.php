@@ -9,13 +9,21 @@
     <title>Vizualização Aurora</title>
 </head>
 <body>
+    <header>
+        <div class="d-flex align-items-center mt-sm-n1 pb-4 mb-0 mb-lg-1 mb-xl-3">
+            <h2 class="h4 mb-0"> <a class="btn btn-secondary me-3 me-sm-4" type="button" href="/"><i class="ai-undo me-2 ms-n1"></i>Home</a></h2>
+            <h2 class="h4 mb-0"> <a class="btn btn-secondary me-3 me-sm-4" type="button" href="/products/create"><i class="ai-undo me-2 ms-n1"></i>Criar listas</a></h2>
+    </header>
     <table class="table table-striped table-bordered">
         <thead>
             <tr>
                 <th scope="col">ID</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Descrição do Produto</th>
-                <th scope="col">Intenção</th>
+                <th scope="col">Usuário</th>
+                <th scope="col">Título</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Imagem</th>
+                <th scope="col">Regulamento</th>
+                <th scope="col">Comissão</th>
 
             </tr>
         </thead>
@@ -23,9 +31,12 @@
             @foreach($products as $product)
             <tr>
                 <th scope="row">{{ $product->id }}</th>
-                <td>{{ $product->title }}</td>
-                <td>{{ $product->description }} </td>
-                <td>{{ $product->intention }}</td>
+                <td>{{ $product->user_id }}</td>
+                <td>{{ $product->title }} </td>
+                <td>{{ $product->description }}</td>
+                <td>{{ $product->image }}</td>
+                <td>{{ $product->regulation }}</td>
+                <td>{{ $product->comission }}</td>
                 <td><a href="/product/edit/{{ $product->id }}"><input class="btn btn-primary" type="reset" value="Editar"></a></td>
                 <td>
                     <form action="/product/destroy/{{ $product->id }}" method="POST">

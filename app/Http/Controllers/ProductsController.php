@@ -24,9 +24,13 @@ class ProductsController extends Controller
         $product = new Product;
 
 
+        $product->user_id = $request->user_id;
         $product->title = $request->title;
         $product->description = $request->description;
-        $product->intention = $request->intention;
+        $product->description = $request->description;
+        $product->image = $request->image;
+        $product->regulation = $request->regulation;
+        $product->comission = $request->comission;
 
         $product->save();
 

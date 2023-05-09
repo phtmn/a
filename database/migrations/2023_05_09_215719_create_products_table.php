@@ -14,9 +14,13 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('user_id');
             $table->string('title');
-            $table->text('description');
-            $table->string('intention');
+            $table->string('description');
+            $table->string('image');
+            $table->string('regulation');
+            $table->string('comission');
+
         });
     }
 
