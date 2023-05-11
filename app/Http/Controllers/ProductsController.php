@@ -26,22 +26,24 @@ class ProductsController extends Controller
 
         $product->user_id = $request->user_id;
         $product->title = $request->title;
-        $product->description = $request->description;
-        $product->description = $request->description;
         $product->image = $request->image;
+        $product->description = $request->description;
+        $product->description = $request->description;
         $product->regulation = $request->regulation;
         $product->comission = $request->comission;
 
+
+
         $product->save();
 
-        return view('products.create');
+        return redirect ('/')->with('msg','Lista inserida com sucesso!');
     }
 
 
-    public function edit($id){
+    public function show($id){
 
-        $product = Product::findOrFail('id');
+        $product = Product::findOrFail('$id');
 
-        return view('/products.edit',['product'=>$product]);
+        return view('products.show',['product'=>$product]);
     }
 }

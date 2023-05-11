@@ -30,26 +30,26 @@
                         <form action="/products/store" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3 container">
-                                <label class="form-label" for="titulo">Nome de Usuário:</label>
+                                <label class="form-label" for="user_id">Nome de Usuário:</label>
                                 <input class="form-control" type="text" name="user_id" id="user_id" required>
 
                                 <label class="form-label" for="titulo">Título:</label>
                                 <input class="form-control" name="title" id="title" cols="15" rows="10" required>
 
                                 <br>
-                                <label class="form-label" for="titulo">Descrição:</label>
+                                <label class="form-label" for="description">Descrição:</label>
                                 <input class="form-control" type="text" name="description" id="decription">
 
                                 <br>
-                                <label class="form-label" for="titulo">Imagem:</label>
-                                <input class="form-control" type="file" name="image" id="image">
-
+                                <label class="form-label" for="image">Imagem:</label>
+                                <input class="form-control-file" type="file" name="image" id="image">
                                 <br>
-                                <label class="form-label" for="titulo">Regulamento:</label>
+                                <br>
+                                <label class="form-label" for="regulation">Regulamento:</label>
                                 <input class="form-control" type="text" name="regulation" id="regulation">
 
                                 <br>
-                                <label class="form-label" for="titulo">Comissão:</label>
+                                <label class="form-label" for="comission">Comissão:</label>
                                 <input class="form-control" type="text" name="comission" id="comission">
 
                                 <div class="col-12 d-flex justify-content-end pt-3">

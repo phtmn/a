@@ -21,4 +21,4 @@ Route::get('/', function () {
 Route::get('/products/create',[ProductsController::class,'create']);
 Route::post('/products/store',[ProductsController::class,'store']);
 Route::get('/products',[ProductsController::class,'index']);
-Route::get('/product/edit/{id}',[ProductsController::class,'edit']);
+Route::get('/products/{id}',[ProductsController::class,'show']);
