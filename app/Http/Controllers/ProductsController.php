@@ -9,9 +9,19 @@ class ProductsController extends Controller
 {
     //
     public function index(){
-        $products = Product::all();
 
-        return view('/products.index',['products'=>$products]);
+        $search = request('search');
+
+        if($search){
+            $products = Product::where([
+                ['user_id','like','%'.$search.'%']])->get();
+        }else{
+            $products = Product::all();
+        }
+
+
+
+        return view('welcome',['products'=>$products,'search'=>$search]);
     }
 
 
@@ -39,10 +49,9 @@ class ProductsController extends Controller
         return redirect ('/')->with('msg','Lista inserida com sucesso!');
     }
 
-
     public function show($id){
 
-        $product = Product::findOrFail('$id');
+        $product = Product::findOrFail($id);
 
         return view('products.show',['product'=>$product]);
     }
