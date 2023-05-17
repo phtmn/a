@@ -9,21 +9,43 @@
 </head>
 <body>
 
-    <div class="justify-content-center " style="height: 100vh; color:white ;background-color: #2c3e50;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Aurora</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products/create">Criar</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-    <header>
-        <a href="/" class="btn btn-secondary me-3 me-sm-4 ">HOME</a>
-    </header>
-
-                <h1>{{$product->user_id}}</h1><br>
-                <h4>#{{$product->id}}</h4><br>
-                <p>{{$product->title}}</p><br>
-                <p>{{$product->description}}</p><br>
-                <p>{{$product->comission}}</p><br>
-                <p>{{$product->regulation}}</p><br>
-
+      <div>
+        <ul class="list-group">
+            <li class="list-group-item active">{{$product->user_id}}  #{{$product->id}}</li>
+            <li class="list-group-item">{{$product->title}}</li>
+            <li class="list-group-item">{{$product->comission}}</li>
+            <li class="list-group-item">{{$product->image}}</li>
+            <li class="list-group-item">{{$product->description}}</li>
+            <li class="list-group-item">{{$product->regulation}}</li>
+          </ul>
       </div>
 
+      <div>
+        <a href="/products/edit/{{$product->id}}" class="btn btn-primary">Editar</a>
+        <form action="/products/{{ $product->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger delete-btn">Deletar</button>
+        </form>
+
+      </div>
 </body>
 </html>

@@ -55,4 +55,28 @@ class ProductsController extends Controller
 
         return view('products.show',['product'=>$product]);
     }
+
+
+    public function destroy($id){
+
+        $product = Product::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg','Evento excluido com sucesso !');
+    }
+
+    public function edit($id){
+
+        $product = Product::findOrFail($id);
+
+        return view('products.edit',['product'=> $product]);
+    }
+
+    public function update(Request $request){
+
+        $product = Product::findOrFail($request ->id)->update($request->all());
+
+
+        return redirect ('/')->with('msg','Lista editada com sucesso!');
+    }
+
 }

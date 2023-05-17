@@ -9,10 +9,28 @@
     <title>Aurora</title>
 </head>
 <body>
-    <header>
-        <a href="/products/create" class="btn btn-secondary me-3 me-sm-4">Criar lista</a>
-        <a href="/" class="btn btn-secondary me-3 me-sm-4">HOME</a>
-    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Aurora</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/products/create">Criar</a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="search" id="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          </form>
+        </div>
+      </nav>
 
     <main>
         <div class="container-fluid">
@@ -24,13 +42,6 @@
         </div>
     </main>
     <br>
-    <div id="search-container" class="col-md-12">
-        <form action="/" method="GET">
-            <input type="text" id="search" name="search" class="form-control" placeholder="Procurar....">
-        </form>
-    </div><br>
-
-
 
     <div id="lista-container" class="col-md-12">
         <h3>Segue os Dados Salvos</h3>
@@ -39,7 +50,7 @@
         <div id="cards-container" class="row">
             @foreach ($products as $product )
                 <div class="card-col-md-3">
-                    <img width="100px" height="100px" src="/img/dados.png" alt="{{$product->name}}">
+                    <img width="100px" height="100px" src="/img/imagem.jpg" alt="{{$product->name}}">
                     <div class="card-body">
                         <h4 class="card-name">{{$product->user_id}}</h4>
                         <h5 class="card-description">{{$product->title}}</h5>
