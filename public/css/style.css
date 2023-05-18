@@ -1,0 +1,19 @@
+.msg{
+    background-color: #155724;
+    color: green;
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+}
+
+.msg1{
+    background-color: #d40000;
+    color: rgba(0, 0, 0, 0);
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+}
