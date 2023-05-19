@@ -11,18 +11,16 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Aurora</a>
+        <a class="navbar-brand" href="/">Aurora</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
+
         </button>
 
         <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(página atual)</span></a>
-            </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="/products/create">Criar</a>
+              <a class="nav-link" href="/products/create">Adicionar Lista</a>
             </li>
 
           </ul>
@@ -37,6 +35,12 @@
             <div class="row">
                 @if (session('msg'))
                     <p class="msg">{{session('msg')}}</p>
+                @endif
+                @if (session('msg1'))
+                <p class="msg1">{{session('msg1')}}</p>
+                @endif
+                @if (session('msg2'))
+                <p class="msg2">{{session('msg2')}}</p>
                 @endif
             </div>
         </div>

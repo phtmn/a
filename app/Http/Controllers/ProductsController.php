@@ -61,7 +61,7 @@ class ProductsController extends Controller
 
         $product = Product::findOrFail($id)->delete();
 
-        return redirect('/')->with('msg','Evento excluido com sucesso !');
+        return redirect('/')->with('msg2','Evento excluido com sucesso !');
     }
 
     public function edit($id){
@@ -76,7 +76,7 @@ class ProductsController extends Controller
         $product = Product::findOrFail($request ->id)->update($request->all());
 
 
-        return redirect ('/')->with('msg','Lista editada com sucesso!');
+        return redirect ('/')->with('msg1','Lista editada com sucesso!');
     }
 
 }

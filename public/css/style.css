@@ -1,7 +1,7 @@
 .msg{
     background-color: #155724;
-    color: green;
-    border: 1px solid rebeccapurple;
+    color: white;
+    border: 1px solid #155724;
     width: 100%;
     margin-bottom: 0px;
     text-align: center;
@@ -9,11 +9,22 @@
 }
 
 .msg1{
-    background-color: #d40000;
-    color: rgba(0, 0, 0, 0);
-    border: 1px solid rebeccapurple;
+    background-color: #051ceb;
+    color: white;
+    border: 1px solid #051ceb;
     width: 100%;
     margin-bottom: 0px;
     text-align: center;
     padding: 10px;
 }
+
+.msg2{
+    background-color: #eb0e0e;
+    color: white;
+    border: 1px solid #eb0e0e;
+    width: 100%;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+}
+
